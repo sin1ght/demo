@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "jsx": "react", //在tsx里面支持jsx
+        "sourceMap": true,
+        "isolatedModules": true,
+        "noImplicitAny":true, //在表达式和声明上有隐含的 any类型时报错
+        "esModuleInterop":true, 
+        //允许从没有设置默认导出的模块中默认导入 import * as fs from 'fs' 等于 import fs from 'fs'
+        "strict": true,
+        "baseUrl":"./", //解析非相对模块名的基准目录
+        "paths": {
+            // 配置模块路径映射
+            "@/*": ["./src/*"],
+        },
+        "skipLibCheck":true,//忽略所有的声明文件（ *.d.ts）的类型检查
+        // 下面这些选项对 babel 编译 TypeScript 没有作用但是可以让 VSCode 等编辑器正确提示错误
+        "target": "ES2019",
+        "module": "ESNext"
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
